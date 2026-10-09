@@ -1,0 +1,1231 @@
+/* =========================================================
+   LITTLE LEMON
+   MODERN UI — VERSION 2
+   ========================================================= */
+
+
+/* =========================================================
+   🎨 COLOR PALETTE
+   ========================================================= */
+
+:root {
+  --green-dark: #173f35;
+  --green: #2e6655;
+  --green-light: #dfece5;
+
+  --yellow: #f6c945;
+  --yellow-soft: #fff0b8;
+
+  --orange: #e8794f;
+  --orange-soft: #fde1d5;
+
+  --cream: #fffaf0;
+  --cream-dark: #f4ead7;
+
+  --white: #ffffff;
+
+  --text: #24332f;
+  --text-soft: #78827d;
+
+  --border: #e6dccb;
+
+  --shadow:
+    0 18px 45px rgba(23, 63, 53, 0.10);
+
+  --shadow-hover:
+    0 25px 60px rgba(23, 63, 53, 0.16);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  color: var(--text);
+
+  background: var(--cream);
+
+  line-height: 1.6;
+
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+  position: relative;
+
+  padding:
+    70px 7% 55px;
+
+  background:
+    radial-gradient(
+      circle at 88% 20%,
+      rgba(246, 201, 69, 0.45),
+      transparent 24%
+    ),
+
+    radial-gradient(
+      circle at 10% 80%,
+      rgba(232, 121, 79, 0.10),
+      transparent 25%
+    ),
+
+    linear-gradient(
+      135deg,
+      var(--cream),
+      var(--cream-dark)
+    );
+
+  overflow: hidden;
+}
+
+
+/* decorative circle */
+
+header::after {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  right: -80px;
+  top: -80px;
+
+  border:
+    2px solid
+    rgba(23, 63, 53, 0.10);
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   HEADER TEXT
+   ========================================================= */
+
+header p:first-child {
+  position: relative;
+
+  z-index: 2;
+
+  display: inline-block;
+}
+
+header p:first-child a {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: var(--green-dark);
+
+  font-size: 24px;
+
+  font-weight: 900;
+
+  letter-spacing: -0.7px;
+
+  transition:
+    transform 0.25s ease;
+
+}
+
+header p:first-child a::before {
+
+  content: "🍋";
+
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+
+  place-items: center;
+
+  background: var(--yellow);
+
+  border-radius: 50%;
+
+  font-size: 18px;
+
+  box-shadow:
+    0 8px 20px
+    rgba(246, 201, 69, 0.25);
+
+}
+
+header p:first-child a:hover {
+
+  transform:
+    translateY(-2px);
+
+}
+
+
+/* tagline */
+
+header p:nth-child(2) {
+
+  max-width: 850px;
+
+  margin-top: 35px;
+
+  position: relative;
+
+  z-index: 2;
+
+  color: var(--green-dark);
+
+  font-size:
+    clamp(42px, 6vw, 76px);
+
+  font-weight: 900;
+
+  line-height: 0.98;
+
+  letter-spacing: -4px;
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+nav {
+
+  position: relative;
+
+  z-index: 10;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  padding:
+    0 7% 28px;
+
+  margin-top:
+    -28px;
+
+  background:
+    transparent;
+
+}
+
+
+/* nav list */
+
+nav ul {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+}
+
+
+/* nav links */
+
+nav li a {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    10px 16px;
+
+  color: var(--green-dark);
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  border-radius:
+    999px;
+
+  transition:
+    0.25s ease;
+
+}
+
+nav li a:hover {
+
+  color: var(--orange);
+
+  background:
+    rgba(255,255,255,0.65);
+
+}
+
+
+/* Book button */
+
+nav li:last-child a {
+
+  padding:
+    12px 20px;
+
+  color: var(--white);
+
+  background:
+    var(--green-dark);
+
+  box-shadow:
+    0 8px 20px
+    rgba(23, 63, 53, 0.16);
+
+}
+
+nav li:last-child a:hover {
+
+  color: var(--white);
+
+  background:
+    var(--orange);
+
+  transform:
+    translateY(-2px);
+
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+main {
+
+  width:
+    min(1150px, 86%);
+
+  margin:
+    0 auto;
+
+  padding:
+    90px 0 110px;
+
+}
+
+
+/* =========================================================
+   MAIN TITLE
+   ========================================================= */
+
+main > h1 {
+
+  position: relative;
+
+  margin-bottom:
+    45px;
+
+  color:
+    var(--green-dark);
+
+  font-size:
+    clamp(48px, 6vw, 70px);
+
+  line-height:
+    1;
+
+  letter-spacing:
+    -4px;
+
+}
+
+
+/* little accent */
+
+main > h1::after {
+
+  content: "";
+
+  display: block;
+
+  width: 75px;
+
+  height: 8px;
+
+  margin-top: 18px;
+
+  background:
+    var(--yellow);
+
+  border-radius:
+    999px;
+
+}
+
+
+/* =========================================================
+   MENU ITEMS
+   Karena HTML kamu masih menggunakan <div> biasa,
+   kita target langsung div di dalam main.
+   ========================================================= */
+
+main > div {
+
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    280px
+    1fr;
+
+  grid-template-rows:
+    auto auto auto;
+
+  column-gap:
+    32px;
+
+  padding:
+    22px;
+
+  margin-bottom:
+    25px;
+
+  background:
+    var(--white);
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    28px;
+
+  box-shadow:
+    var(--shadow);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+}
+
+
+/* hover */
+
+main > div:hover {
+
+  transform:
+    translateY(-7px);
+
+  box-shadow:
+    var(--shadow-hover);
+
+}
+
+
+/* =========================================================
+   FOOD IMAGE
+   ========================================================= */
+
+main > div img {
+
+  width:
+    280px;
+
+  height:
+    210px;
+
+  object-fit:
+    cover;
+
+  grid-row:
+    1 / 4;
+
+  border-radius:
+    20px;
+
+  transition:
+    transform 0.5s ease;
+
+}
+
+
+/* image hover */
+
+main > div:hover img {
+
+  transform:
+    scale(1.035);
+
+}
+
+
+/* =========================================================
+   FOOD NAME
+   ========================================================= */
+
+main > div h2 {
+
+  align-self:
+    end;
+
+  color:
+    var(--green-dark);
+
+  font-size:
+    30px;
+
+  line-height:
+    1.1;
+
+  letter-spacing:
+    -1px;
+
+}
+
+
+/* =========================================================
+   FOOD DESCRIPTION
+   ========================================================= */
+
+main > div p:first-of-type {
+
+  align-self:
+    center;
+
+  color:
+    var(--text-soft);
+
+  font-size:
+    15px;
+
+}
+
+
+/* =========================================================
+   FOOD PRICE
+   ========================================================= */
+
+main > div p:last-of-type {
+
+  align-self:
+    start;
+
+  color:
+    var(--orange);
+
+  font-size:
+    21px;
+
+  font-weight:
+    900;
+
+}
+
+
+/* =========================================================
+   PRICE LIST TITLE
+   ========================================================= */
+
+main > h2 {
+
+  margin-top:
+    80px;
+
+  margin-bottom:
+    25px;
+
+  color:
+    var(--green-dark);
+
+  font-size:
+    40px;
+
+  letter-spacing:
+    -2px;
+
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+table {
+
+  width:
+    100%;
+
+  border-collapse:
+    separate;
+
+  border-spacing:
+    0;
+
+  overflow:
+    hidden;
+
+  background:
+    var(--white);
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    22px;
+
+  box-shadow:
+    var(--shadow);
+
+}
+
+
+/* table cells */
+
+th,
+td {
+
+  padding:
+    18px 22px;
+
+  text-align:
+    left;
+
+  border-bottom:
+    1px solid
+    var(--border);
+
+}
+
+
+/* heading */
+
+th {
+
+  color:
+    var(--white);
+
+  background:
+    var(--green-dark);
+
+  font-size:
+    13px;
+
+  text-transform:
+    uppercase;
+
+  letter-spacing:
+    1px;
+
+}
+
+
+/* body */
+
+td {
+
+  color:
+    var(--text);
+
+  font-size:
+    15px;
+
+}
+
+
+/* alternate row */
+
+tr:nth-child(even) td {
+
+  background:
+    #fcf8ef;
+
+}
+
+
+/* last row */
+
+tr:last-child td {
+
+  border-bottom:
+    none;
+
+}
+
+
+/* price column */
+
+td:last-child {
+
+  color:
+    var(--orange);
+
+  font-weight:
+    900;
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    30px;
+
+  padding:
+    45px 7%;
+
+  color:
+    var(--white);
+
+  background:
+    var(--green-dark);
+
+}
+
+
+/* footer text */
+
+footer p {
+
+  color:
+    rgba(255,255,255,0.65);
+
+  font-size:
+    13px;
+
+}
+
+
+/* first footer text */
+
+footer p:first-child {
+
+  color:
+    var(--white);
+
+  font-weight:
+    700;
+
+}
+
+
+/* =========================================================
+   LOCATION PAGE
+   ========================================================= */
+
+/* Location main */
+
+main > p {
+
+  max-width:
+    700px;
+
+  margin-bottom:
+    15px;
+
+  padding:
+    20px 24px;
+
+  color:
+    var(--text-soft);
+
+  background:
+    var(--white);
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    18px;
+
+  box-shadow:
+    0 8px 25px
+    rgba(23,63,53,0.05);
+
+}
+
+
+/* location link */
+
+main > p a {
+
+  color:
+    var(--orange);
+
+  font-weight:
+    800;
+
+}
+
+
+/* =========================================================
+   BOOKING PAGE
+   ========================================================= */
+
+form {
+
+  max-width:
+    720px;
+
+  padding:
+    35px;
+
+  background:
+    var(--white);
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    28px;
+
+  box-shadow:
+    var(--shadow);
+
+}
+
+
+/* labels */
+
+form label {
+
+  display:
+    inline-block;
+
+  margin:
+    12px 0 7px;
+
+  color:
+    var(--green-dark);
+
+  font-size:
+    13px;
+
+  font-weight:
+    800;
+
+}
+
+
+/* inputs */
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form textarea {
+
+  width:
+    100%;
+
+  padding:
+    14px 16px;
+
+  color:
+    var(--text);
+
+  background:
+    #fcf9f3;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    13px;
+
+  outline:
+    none;
+
+  transition:
+    0.2s ease;
+
+}
+
+
+/* focus */
+
+form input:focus,
+form textarea:focus {
+
+  background:
+    var(--white);
+
+  border-color:
+    var(--green);
+
+  box-shadow:
+    0 0 0 4px
+    rgba(46,102,85,0.08);
+
+}
+
+
+/* radio */
+
+form input[type="radio"] {
+
+  accent-color:
+    var(--green);
+
+}
+
+
+/* submit */
+
+form input[type="submit"] {
+
+  width:
+    100%;
+
+  margin-top:
+    20px;
+
+  padding:
+    16px 22px;
+
+  color:
+    var(--white);
+
+  background:
+    var(--green-dark);
+
+  border:
+    none;
+
+  border-radius:
+    999px;
+
+  cursor:
+    pointer;
+
+  font-weight:
+    800;
+
+  transition:
+    0.25s ease;
+
+}
+
+form input[type="submit"]:hover {
+
+  background:
+    var(--orange);
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 12px 25px
+    rgba(232,121,79,0.20);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  header {
+
+    padding:
+      55px 6% 45px;
+
+  }
+
+  header p:nth-child(2) {
+
+    font-size:
+      52px;
+
+  }
+
+  nav {
+
+    justify-content:
+      center;
+
+    padding:
+      10px 6% 25px;
+
+    margin-top:
+      0;
+
+  }
+
+  main {
+
+    width:
+      88%;
+
+    padding:
+      65px 0 80px;
+
+  }
+
+  main > div {
+
+    grid-template-columns:
+      220px
+      1fr;
+
+  }
+
+  main > div img {
+
+    width:
+      220px;
+
+    height:
+      190px;
+
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  /* header */
+
+  header {
+
+    padding:
+      40px 6% 45px;
+
+  }
+
+  header p:first-child a {
+
+    font-size:
+      21px;
+
+  }
+
+  header p:nth-child(2) {
+
+    margin-top:
+      28px;
+
+    font-size:
+      42px;
+
+    letter-spacing:
+      -2.5px;
+
+  }
+
+
+  /* navigation */
+
+  nav {
+
+    padding:
+      15px 5% 20px;
+
+  }
+
+  nav ul {
+
+    width:
+      100%;
+
+    flex-wrap:
+      wrap;
+
+    justify-content:
+      center;
+
+    gap:
+      5px;
+
+  }
+
+  nav li a {
+
+    font-size:
+      12px;
+
+    padding:
+      9px 12px;
+
+  }
+
+
+  /* main */
+
+  main {
+
+    width:
+      90%;
+
+    padding:
+      55px 0 70px;
+
+  }
+
+  main > h1 {
+
+    font-size:
+      48px;
+
+    letter-spacing:
+      -2.5px;
+
+  }
+
+
+  /* cards */
+
+  main > div {
+
+    display:
+      block;
+
+    padding:
+      15px;
+
+    border-radius:
+      22px;
+
+  }
+
+  main > div img {
+
+    width:
+      100%;
+
+    height:
+      230px;
+
+    margin-bottom:
+      20px;
+
+    border-radius:
+      17px;
+
+  }
+
+  main > div h2 {
+
+    margin-bottom:
+      8px;
+
+    font-size:
+      27px;
+
+  }
+
+  main > div p {
+
+    margin-bottom:
+      8px;
+
+  }
+
+
+  /* table */
+
+  table {
+
+    font-size:
+      13px;
+
+  }
+
+  th,
+  td {
+
+    padding:
+      13px 12px;
+
+  }
+
+
+  /* form */
+
+  form {
+
+    padding:
+      22px;
+
+    border-radius:
+      22px;
+
+  }
+
+
+  /* footer */
+
+  footer {
+
+    flex-direction:
+      column;
+
+    align-items:
+      flex-start;
+
+    padding:
+      35px 6%;
+
+  }
+
+}
